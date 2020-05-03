@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  
+    <div class="previewWrap">
+      <div class="preview">
+        <div class="jqzoom">
+          <img src="./images/s1.png" >
+        </div>
+      </div>
+      <div class="specScroll">
+        <a class="prev">&lt;</a>
+        <div class="items">
+            <div class="itemsCon">
+               
+            </div>
+        </div>
+        <a class="next">&gt;</a>
+    </div>
+    </div>
+    <div class="infoWrap">
+      <div class="info1">
+     
+    </div>
+    <div class="choose">
+        <div class="chooseArea">
+          <div class="choosed">
+          </div>
+        </div>
+        <div class="cartWrap">
+            <div class="controls">
+                <input type="text" value="1" class="itxt">
+                <a href="###" class="plus">+</a>
+                <a href="###" class="mins">-</a>
+            </div>
+            <div class="add">
+                <a href="###" traget="_blank">加入购物车</a>
+            </div>
+        </div>
+    </div>
+    </div>
+ 
+  <div class="conpoin">
+
+  </div>
+    <section class="prodct">
+      <aside class="aside">
+        <div class="tabwrapd">
+          <h4 class="acrive">相关分类</h4>
+          <h4>推荐品牌</h4>
+        </div>
+        <div class="tabcon">
+          <div class="tabpane acrive">
+            <ul class="parlist">
+              <li>手机</li>
+              <li>手机壳</li>
+              <li>内存卡</li>
+              <li>Ipone配件</li>
+              <li>贴膜</li>
+              <li>手机耳机</li>
+              <li>移动电源</li>
+              <li>平板电脑</li>
+            </ul>
+            <ul class="goodlist">
+              <li>
+                <div class="C">
+                  <img src="./images/part01.png" alt="">
+                </div>
+                <div class="arr">Apple苹果iPhone 6s (A1699)</div>
+                <div class="price">¥6088.00</div>
+                <div class="shopcar">
+                  <a href="#">加入购物车</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-img">
+                  <img src="./images/part02.png" alt="">
+                </div>
+                <div class="arr">Apple苹果iPhone 6s (A1699)</div>
+                <div class="price">¥6088.00</div>
+                <div class="shopcar">
+                  <a href="#">加入购物车</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-img">
+                  <img src="./images/part03.png" alt="">
+                </div>
+                <div class="arr">Apple苹果iPhone 6s (A1699)</div>
+                <div class="price">¥6088.00</div>
+                <div class="shopcar">
+                  <a href="#">加入购物车</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-img">
+                  <img src="./images/part01.png" alt="">
+                </div>
+                <div class="arr">Apple苹果iPhone 6s (A1699)</div>
+                <div class="price">¥6088.00</div>
+                <div class="shopcar">
+                  <a href="#">加入购物车</a>
+                </div>
+              </li>
+              <li>
+                <div class="p-img">
+                  <img src="./images/part02.png" alt="">
+                </div>
+                <div class="arr">Apple苹果iPhone 6s (A1699)</div>
+                <div class="price">¥6088.00</div>
+                <div class="shopcar">
+                  <a href="#">加入购物车</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class=" tabpane ">推荐品牌</div>
+        </div>
+
+      </aside>
+      <div class="detail">
+        <div class="topb">
+        <p>选择搭配</p>
+        </div>
+        <ul>
+          <li><img src="./images/l-m01.png" alt="" >
+          <p class="one">$5299</p>
+          <i>+</i>
+          </li>
+          <li><img src="./images/dp02.png" alt="">
+            <p>Feless费勒斯VR</p>
+            <label>
+              <input type="checkbox" value="39">
+              <span>39</span>
+            </label>
+            </li>
+            <li><img src="./images/dp03.png" alt="">
+              <p>Feless费勒斯VR</p>
+              <label>
+                <input type="checkbox" value="50">
+                <span>50</span>
+              </label>
+              </li>
+              <li><img src="./images/dp04.png" alt="">
+                <p>Feless费勒斯VR</p>
+                <label>
+                  <input type="checkbox" value="59">
+                  <span>59</span>
+                </label>
+                </li>
+                <li><img src="./images/dp01.png" alt="">
+                  <p>Feless费勒斯VR</p>
+                  <label>
+                    <input type="checkbox" value="99">
+                    <span>99</span>
+                  </label>
+                  </li>
+        </ul>
+          <div class="boxcar">
+            <h4>已选购0件商品</h4>
+            <p>套餐价</p>
+            <em>¥5299</em>
+            <button>加入购物车</button>
+          </div>
+      </div>
+    
+    
+    
+    
+    </section>
+<script src="./01/data.js"></script>
+    <script>
+          window.addEventListener("DOMContentLoaded",function(){
+           var magnifierId= 0
+           var changnum = 1
+            magnifier();
+            function magnifier(){
+              var imgsrc = goodData.imgsrc
+              var oJqzoomImg = document.querySelector(".previewWrap .preview .jqzoom img")
+              oJqzoomImg.src = imgsrc[magnifierId].s
+
+
+              var opreview = document.querySelector(".previewWrap .preview ")
+              var oJqzoom = document.querySelector(".previewWrap .preview .jqzoom")
+              var omask = null;
+              var omaxbox = null;
+              var omaxing = null;
+
+            opreview.onmouseenter = function(){
+              if(!omask){
+                omask = document.createElement("div")
+                omask.className = "mask"
+                oJqzoom.appendChild(omask)
+              }
+              if(!omaxbox){
+                omaxbox = document.createElement("div")
+                omaxbox.className = "maxbox"
+                omaxing = new Image()
+                omaxing.src =imgsrc[magnifierId].b
+                omaxbox.appendChild(omaxing)
+                opreview.appendChild(omaxbox)
+              }
+              oJqzoom.onmousemove = function(e){
+                var maskP = {
+                  left:e.clientX - omask.offsetWidth/2 - oJqzoom.getBoundingClientRect().left,
+                  top: e.clientY  - omask.offsetHeight/2 - oJqzoom.getBoundingClientRect().top
+                }
+                if(maskP.left <= 0){
+                  maskP.left = 0
+                }else if(maskP.left >= oJqzoom.clientWidth - omask.clientWidth ){
+                  maskP.left = oJqzoom.clientWidth - omask.clientWidth
+                }
+                if(maskP.top <= 0){
+                  maskP.top = 0
+                }else if(maskP.top >= oJqzoom.offsetHeight - omask.clientHeight){
+                  maskP.top  = oJqzoom.offsetHeight - omask.clientHeight
+                }
+                omask.style.left = maskP.left + "px"
+                omask.style.top = maskP.top + "px"
+
+                var sacle = (oJqzoom.offsetWidth - omask.clientWidth) / (omaxing.offsetWidth - omaxbox.clientWidth)
+                var maxP = {
+                  left: maskP.left / sacle,
+                  top:maskP.top / sacle
+                }
+                omaxing.style.marginTop = -maxP.top + "px"
+                omaxing.style.marginLeft = -maxP.left + "px"
+              }
+              opreview.onmouseleave = function(){
+                oJqzoom.removeChild(omask)
+                opreview.removeChild(omaxbox)
+                omaxbox = null;
+                omaxing =null;
+               omask = null
+                opreview.onmouseleave = null;
+                oJqzoom.onmousemove = null;
+              }
+            }
+
+            }
+            function getStyle(obj, attr) {
+                if (obj.currentStyle) {
+                    return obj.currentStyle[attr];
+                } else {
+                    return document.defaultView.getComputedStyle(obj, null)[attr];
+                }
+            }
+
+            thumbnail();
+          function thumbnail(){
+            var oScrollDiv = document.querySelector(".previewWrap .specScroll .items .itemsCon")
+            var imsrc = goodData.imgsrc
+            imsrc.forEach(function(item){
+              var oimg = new Image()
+              oimg.src=item.s
+              oScrollDiv.appendChild(oimg)
+            })
+
+            var oScrollItems = document.querySelectorAll(".previewWrap .specScroll .items .itemsCon img")
+            
+            var prev = document.querySelector(".previewWrap .specScroll .prev")
+            var next = document.querySelector(".previewWrap .specScroll .next")
+
+            var templength =0
+            var pnum = 5
+            var movenum = 2
+            var countLength = (oScrollItems.length - pnum)*(oScrollItems[0].offsetWidth + 20);
+            var movelenght = (oScrollItems[0].offsetWidth + 20)*movenum
+
+            oScrollDiv.style.transition = "all .3s linear";
+            
+            next.onclick =function(){
+              if(countLength > templength){
+
+                if(countLength - templength >= movelenght){
+                  templength = templength + movelenght
+                  oScrollDiv.style.left = -templength + "px"
+                }else{
+                  templength = templength +(countLength-templength)
+                  oScrollDiv.style.left = -templength + "px"
+                }
+              }
+            }
+            
+            prev.onclick = function(){
+
+              if(templength >=0){
+                if(templength > movelenght){
+                  templength = templength - movelenght
+                  oScrollDiv.style.left = -templength + "px"
+                }else{
+                  templength = 0
+                  oScrollDiv.style.left = -templength + "px"
+                }
+              }
+            }
+          }
+         
+          thumbnailClick();
+          function thumbnailClick(){
+            var oScrollItems = document.querySelectorAll(".previewWrap .specScroll .items .itemsCon img")
+            var oJqzoomImg = document.querySelector(".previewWrap .preview .jqzoom img")
+            
+           for(var i =0; i < oScrollItems.length;i++){
+
+            oScrollItems[i].onclick = function(){
+            
+                for(var i =0;i <oScrollItems.length; i++){
+                  if(oScrollItems[i] == this){
+                    magnifierId = i
+                    oJqzoomImg.src = this.src
+                  }
+                }
+              
+
+            }
+           }
+         
+          }
+         
+          screening();
+          function screening(){
+            var crumb = goodData.goodsDetail.crumbData
+           
+               var ochoose = document.querySelector(".infoWrap .choose .chooseArea")
+               crumb.forEach(function(item,index,array){
+                var odl = document.createElement("dl")
+                var odt = document.createElement("dt")
+                odt.innerHTML = item.title;
+                odl.appendChild(odt)
+                item.data.forEach(function(item){
+                  var odd = document.createElement("dd")
+                  odd.setAttribute("changePrice", item.changePrice)
+                  
+                  odd.innerHTML = item.type
+                  odl.appendChild(odd)
+                })
+                ochoose.appendChild(odl)
+
+               })
+
+
+               var odl = ochoose.getElementsByTagName("dl")
+               var arr = new Array(crumb.length)
+               arr.fill(0)
+               for(var i = 0; i< odl.length ; i++){
+                 odl[i].index = i
+                ~function(){
+                  var odd = odl[i].getElementsByTagName("dd")
+                for(var j =0;j < odd.length ; j++){
+                  odd[j].onclick = function(){
+                    for(var i = 0; i < odd.length; i++){
+                      odd[i].style.color = "#666"
+                    
+                                          
+                    }
+                    this.style.color  = "red"
+                    arr[this.parentNode.index] = this
+                    pricesum(arr)
+                    var ochoosed = document.querySelector(".infoWrap .choose .chooseArea .choosed")
+                    ochoosed.innerHTML = ""
+                    arr.forEach(function(item,index){
+
+                      if(item){
+                        var ochomark = document.createElement("mark")
+                        ochomark.innerHTML = item.innerHTML
+                        var ocax = document.createElement("a")
+                        ocax.setAttribute("num",index);
+                        ocax.innerHTML = "X"
+                        ochomark.appendChild(ocax)
+                        ochoosed.appendChild(ochomark)
+                        
+                      }
+                    })
+                    var ochooseA = ochoosed.querySelectorAll("mark a")
+                    for(var i=0;i<ochooseA.length;i++){
+                      ochooseA[i].onclick = function(){
+
+                        var num = parseInt(this.getAttribute("num")) 
+                       this.parentNode.parentNode.removeChild(this.parentNode)
+                       var dldd = odl[num].querySelectorAll("dd")
+                       for(var i=0;i<dldd.length;i++){
+                         dldd[i].style.color = "#666"
+                       }
+                       odl[num].querySelector("dd:nth-of-type(1)").style.color = "red"
+                       arr[num] = 0
+                       pricesum(arr)
+                      }
+                    }
+
+                  }
+                }
+                }()
+          
+               }
+
+         
+          function pricesum(arr) {
+            var oldprice = goodData.goodsDetail.price *changnum
+
+            arr.forEach(function(item,index){
+              if(item){
+                oldprice = oldprice + parseInt(item.getAttribute("changePrice")) *changnum
+              }
+
+            })
+            var oprice = document.querySelector(".infoWrap .info1 .priceArea .priceArea1 .price em")
+            oprice.innerHTML = oldprice
+            var choose = document.querySelector(".prodct .detail ul li .one")
+            choose.innerHTML = "$" + oldprice
+          }
+
+         }    goodnum()
+            function goodnum(){
+              var plus =document.querySelector(".infoWrap .choose .cartWrap .controls .itxt")
+              var max = document.querySelector(".infoWrap .choose .cartWrap .controls .plus")
+              var min = document.querySelector(".infoWrap .choose .cartWrap .controls .mins")
+             
+              max.onclick = function(){
+                changnum++
+                plus.value = changnum
+                var oprice = document.querySelector(".infoWrap .info1 .priceArea .priceArea1 .price em")
+                var finalp= oprice.innerHTML/(changnum-1 )*changnum
+                oprice.innerHTML = finalp
+                changgefp(finalp)
+              }
+              min.onclick = function(){
+                if(changnum>1){
+                  changnum--
+                plus.value = changnum 
+                var oprice = document.querySelector(".infoWrap .info1 .priceArea .priceArea1 .price em")
+               var finalp = oprice.innerHTML/(changnum+1 )*changnum
+               oprice.innerHTML = finalp
+               changgefp(finalp)
+
+                }
+              
+              }
+              function changgefp(finalp){
+                var choose = document.querySelector(".prodct .detail ul li .one")
+                choose.innerHTML = "$" + finalp
+
+
+
+                var ochoosep = document.querySelector(".prodct .detail .boxcar em")
+            var ochoosebox = document.querySelectorAll(".prodct .detail ul li label input[type=checkbox]")
+                ochoosebox.forEach(function(item){
+                  if(item.checked){
+                    finalp += parseInt(item.value)
+                  }
+                })
+                ochoosep.innerHTML = "$" + finalp
+              }
+            }
+          
+          paurl()
+          function paurl(){
+
+            var oconpin = document.querySelector(".conpoin")
+            var url = goodData.path;
+            url.forEach(function(item,index){
+              var oa =document.createElement("a")
+              if(index == url.length-1){
+                oa.innerHTML = item.title
+                oconpin.appendChild(oa)
+              }else{
+                oa.href = item.url
+                oa.innerHTML = item.title
+                oconpin.appendChild(oa)
+              }
+
+            })
+          }
+          
+          goodsdeta()
+          function goodsdeta(){
+            var oinfol =document.querySelector(".infoWrap .info1")
+            var goodscon  = goodData.goodsDetail
+            var oinfolCon = 
+            `<h3 class="infoName">${goodscon.title}</h3>
+    <p class="news">${goodscon.recommend}</p>
+    <div class="priceArea">
+        <div class="priceArea1">
+            <div class="title">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</div>
+            <div class="price">
+                <i>¥</i>
+                <em>${goodscon.price}</em>
+                <span>降价通知</span>
+            </div>
+            <div class="remark">
+                <i>累计评价</i>
+                <span>${goodscon.evaluateNum}</span>
+            </div>
+        </div>
+        <div class="priceArea2">
+            <div class="title">促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</div>
+            <div class="fixWidth">
+                <i class="red-bg">${goodscon.promoteSales.type}</i>
+                <em
+                    class="t-gray">${goodscon.promoteSales.content}</em>
+            </div>
+        </div>
+    </div>
+    <div class="support">
+        <div class="supportArea">
+            <div class="title">支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持</div>
+            <div class="fixWidth">${goodscon.support}</div>
+        </div>
+        <div class="supportArea">
+            <div class="title">配&nbsp;送&nbsp;至</div>
+            <div class="fixWidth">${goodscon.address}</div>
+        </div>
+    </div>
+        `    
+        oinfol.innerHTML = oinfolCon
+          }
+          diaoyong()
+          function diaoyong(){
+            var btn =document.querySelectorAll(".prodct .aside .tabwrapd h4")
+          var pane = document.querySelectorAll(".prodct .aside .tabcon .tabpane")
+
+          for(var i =0;i < btn.length;i++){
+            btn[i].onclick = function(){
+              for(var i =0; i < btn.length;i++){
+                if(btn[i] == this){
+                  btn[i].className ="acrive"
+                  pane[i].style.display = "block"
+                }else{
+                  btn[i].className =""
+                  pane[i].style.display = "none"
+                }
+              }
+            }
+          }
+          }
+        
+          fitting()
+          function fitting(){
+            
+            var ochoosep = document.querySelector(".prodct .detail .boxcar em")
+            var ochoosebox = document.querySelectorAll(".prodct .detail ul li label input[type=checkbox]")
+            
+            ochoosebox.forEach(function(item,index){
+
+              item.onchange = function(){
+                
+                var choose = document.querySelector(".prodct .detail ul li .one")
+                var ochonse = parseInt(choose.innerHTML.substr(1));
+                ochoosebox.forEach(function(item){
+                  if(item.checked){
+                    ochonse += parseInt(item.value)
+                  
+                  }
+                })
+                ochoosep.innerHTML = "$" + ochonse
+              }
+            })
+          
+          
+          }
+       
+       
+        })
+        
+
+
+    </script>
+</body>
+
+</html>
